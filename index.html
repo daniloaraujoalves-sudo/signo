@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descubra seu signo — Pergaminho dos Signos</title>
+  <meta name="description" content="Informe sua data de nascimento e consulte o pergaminho: elemento, planeta regente, virtudes e afinidades do seu signo.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%237a1f1f' stroke='%23b8862b' stroke-width='4'/%3E%3Cpath d='M32 12l5 15 15 1-12 9 4 15-12-9-12 9 4-15-12-9 15-1z' fill='%23e8c77a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700&family=IM+Fell+English:ital@0;1&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+  <main class="home-layout">
+    <section class="intro pergaminho">
+      <p class="selo-topo">Pergaminho dos Signos</p>
+      <h1>Qual é o teu signo?</h1>
+      <p class="divisor" aria-hidden="true"><span>&#10086;</span></p>
+      <p class="lead">Informa a data do teu nascimento, nobre viajante, e o oráculo revelará o elemento, o planeta regente, as virtudes e as afinidades do teu signo.</p>
+
+      <form id="form-signo" novalidate>
+        <label for="data">Data do teu nascimento</label>
+        <div class="form-row">
+          <input type="date" id="data" name="data" min="1900-01-01" required aria-describedby="erro">
+          <button type="submit" class="btn">Consultar o oráculo</button>
+        </div>
+        <p id="erro" class="erro" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="roda-area" aria-label="Roda dos doze signos">
+      <div class="roda" id="roda">
+        <div class="roda-anel" id="roda-anel"></div>
+        <div class="roda-centro" aria-live="polite">
+          <span class="roda-centro-simbolo" id="centro-simbolo">&#10022;</span>
+          <span class="roda-centro-nome" id="centro-nome">Escolhe uma data</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data/signos.js"></script>
+  <script src="js/zodiaco.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
